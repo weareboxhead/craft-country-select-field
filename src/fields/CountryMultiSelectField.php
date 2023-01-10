@@ -38,7 +38,7 @@ class CountryMultiSelectField extends CountrySelectBaseOptionsField
     /**
      * @inheritdoc
      */
-    public function init()
+    public function init(): void
     {
         parent::init();
         $this->multi = true;
