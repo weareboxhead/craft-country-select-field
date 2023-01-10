@@ -35,15 +35,20 @@ class CountrySelectField extends Plugin
     /**
      * @var CountrySelectField
      */
-    public static $plugin;
+    public static CountrySelectField $plugin;
 
-    // Public Properties
+    // Public Properties 
     // =========================================================================
+
+    /**
+     * @inheritdoc
+     */
+    public bool $hasCpSettings = false;
 
     /**
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '1.0.0';
 
     // Public Methods
     // =========================================================================
@@ -51,7 +56,7 @@ class CountrySelectField extends Plugin
     /**
      * @inheritdoc
      */
-    public function init()
+    public function init(): void
     {
         parent::init();
         self::$plugin = $this;

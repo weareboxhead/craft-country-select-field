@@ -140,7 +140,7 @@ class CountrySelectBaseOptionsField extends Field
      * @param string|null $value
      * @return string|null
      */
-    protected function optionLabel(string $value = null)
+    protected function optionLabel(string $value = null): string
     {
         if ($this->options) {
             foreach ($this->options as $option) {
@@ -156,7 +156,7 @@ class CountrySelectBaseOptionsField extends Field
     /**
      * @return array
     */
-    protected function translatedOptions()
+    protected function translatedOptions(): array
     {
         $countries = [
             ['value' => 'AD', 'label' => Craft::t('country-select-field', 'Andorra')],
