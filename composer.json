@@ -1,40 +1,40 @@
 {
-    "name": "lukeyouell/craft-countryselect",
-    "description": "Country select field type.",
-    "type": "craft-plugin",
-    "version": "1.1.2",
-    "keywords": [
-        "craft",
-        "cms",
-        "craftcms",
-        "craft-plugin",
-        "country select"
-    ],
-    "support": {
-        "docs": "https://github.com/lukeyouell/craft-countryselect/blob/v1/README.md",
-        "issues": "https://github.com/lukeyouell/craft-countryselect/issues"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Luke Youell",
-            "homepage": "https://github.com/lukeyouell"
-        }
-    ],
-    "require": {
-        "craftcms/cms": "^3.0.0"
-    },
-    "autoload": {
-        "psr-4": {
-          "lukeyouell\\countryselect\\": "src/"
-        }
-    },
-    "extra": {
-        "name": "Country Select",
-        "handle": "country-select",
-        "hasCpSettings": false,
-        "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/lukeyouell/craft-countryselect/v1/CHANGELOG.md",
-        "class": "lukeyouell\\countryselect\\CountrySelect"
+  "name": "boxhead/craft-country-select-field",
+  "description": "Country select field type.",
+  "type": "craft-plugin",
+  "version": "1.0.0",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin",
+    "country select"
+  ],
+  "support": {
+    "docs": "https://github.com/weareboxhead/craft-country-select-field/blob/v1/README.md",
+    "issues": "https://github.com/weareboxhead/craft-country-select-field/issues"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Boxhead",
+      "homepage": "https://boxhead.io"
     }
+  ],
+  "require": {
+    "craftcms/cms": "^3.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "boxhead\\countryselect\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Country Select",
+    "handle": "country-select",
+    "hasCpSettings": false,
+    "hasCpSection": false,
+    "changelogUrl": "https://raw.githubusercontent.com/weareboxhead/craft-country-select-field/v1/CHANGELOG.md",
+    "class": "boxhead\\countryselect\\CountrySelect"
+  }
 }

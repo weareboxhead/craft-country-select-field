@@ -4,20 +4,17 @@
  *
  * Country select field type.
  *
- * @link      https://github.com/lukeyouell
- * @copyright Copyright (c) 2018 Luke Youell
+ * @link      https://github.com/weareboxhead
+ * @copyright Copyright (c) 2023 Boxhead
  */
 
-namespace lukeyouell\countryselect\fields;
-
-use lukeyouell\countryselect\CountrySelect;
+namespace boxhead\countryselect\fields;
 
 use Craft;
 use craft\base\ElementInterface;
-use craft\base\Field;
 
 /**
- * @author    Luke Youell
+ * @author    Boxhead
  * @package   CountrySelect
  * @since     1.0.0
  */
