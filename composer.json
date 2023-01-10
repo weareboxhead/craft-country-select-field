@@ -2,7 +2,7 @@
   "name": "boxhead/craft-country-select-field",
   "description": "Country select field type.",
   "type": "craft-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "keywords": [
     "craft",
     "cms",
