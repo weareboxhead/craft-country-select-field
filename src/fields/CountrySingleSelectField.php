@@ -21,14 +21,6 @@ use craft\base\ElementInterface;
  */
 class CountrySingleSelectField extends CountrySelectBaseOptionsField
 {
-    // Properties
-    // =========================================================================
-
-    /**
-     * @var array|null The available options
-     */
-    public $options;
-
     // Static Methods
     // =========================================================================
 
@@ -46,22 +38,25 @@ class CountrySingleSelectField extends CountrySelectBaseOptionsField
     /**
      * @inheritdoc
      */
-    public function getInputHtml($value, ElementInterface $element = null): string
+    public function getInputHtml(mixed $value, ?ElementInterface $element = null): string
     {
+        $name = $this->handle;
+        $options = $this->translatedOptions();
+
         // Get our id and namespace
-        $id = Craft::$app->getView()->formatInputId($this->handle);
+        $id = Craft::$app->getView()->formatInputId($name);
         $namespacedId = Craft::$app->getView()->namespaceInputId($id);
 
         // Render the input template
         return Craft::$app->getView()->renderTemplate(
             'country-select-field/_select',
             [
-                'name' => $this->handle,
+                'name' => $name,
                 'value' => $value,
                 'field' => $this,
                 'id' => $id,
                 'namespacedId' => $namespacedId,
-                'options' => $this->options,
+                'options' => $options,
             ]
         );
     }

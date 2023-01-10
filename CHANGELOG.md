@@ -1,5 +1,19 @@
 # Country Select Field Changelog
 
+## 4.0.1 - 2023-01-10
+
+### Fixed
+
+- Fixed field class inheritance
+
+## 4.0.0 - 2023-01-10
+
+### Updated
+
+- Craft 4 compatability changes
+
+### Fixed
+
 ## 1.0.1 - 2023-01-10
 
 ### Fixed

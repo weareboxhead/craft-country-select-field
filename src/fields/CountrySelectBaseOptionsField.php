@@ -12,7 +12,7 @@ namespace boxhead\countryselect\fields;
 
 use Craft;
 use craft\base\ElementInterface;
-use craft\base\Field;
+use craft\base\BaseOptionsField;
 use craft\fields\data\OptionData;
 use craft\fields\data\MultiOptionsFieldData;
 use craft\fields\data\SingleOptionFieldData;
@@ -25,7 +25,7 @@ use craft\helpers\Json;
  * @package   CountrySelectField
  * @since     1.0.0
  */
-class CountrySelectBaseOptionsField extends Field
+class CountrySelectBaseOptionsField extends BaseOptionsField
 {
     // Properties
     // =========================================================================
@@ -33,12 +33,12 @@ class CountrySelectBaseOptionsField extends Field
     /**
      * @var array|null The available options
      */
-    public $options;
+    public array $options = [];
 
     /**
      * @var bool Whether the field should support multiple selections
      */
-    protected $multi = false;
+    protected bool $multi = false;
 
     // Public Methods
     // =========================================================================
@@ -81,7 +81,7 @@ class CountrySelectBaseOptionsField extends Field
     /**
      * @inheritdoc
      */
-    public function normalizeValue($value, ElementInterface $element = null)
+    public function normalizeValue($value, ElementInterface $element = null): mixed
     {
         if ($value instanceof MultiOptionsFieldData || $value instanceof SingleOptionFieldData) {
             return $value;
@@ -123,16 +123,20 @@ class CountrySelectBaseOptionsField extends Field
         return $value;
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function serializeValue($value, ElementInterface $element = null)
-    {
-        return parent::serializeValue($value, $element);
-    }
-
     // Protected Methods
     // =========================================================================
+
+    protected function optionsSettingLabel(): string
+    {
+        return Craft::t('country-select-field', 'Options');
+    }
+
+    protected function defaultValue(): array|string|null
+    {
+        $options = $this->translatedOptions();
+
+        return $options[0]['value'];
+    }
 
     /**
      * Returns an option's label by its value.
