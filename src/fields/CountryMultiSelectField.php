@@ -19,7 +19,7 @@ use craft\base\ElementInterface;
  * @package   CountrySelectField
  * @since     1.0.0
  */
-class CountrySelectMultiField extends CountrySelectBaseOptionsField
+class CountryMultiSelectField extends CountrySelectBaseOptionsField
 {
     // Static Methods
     // =========================================================================
