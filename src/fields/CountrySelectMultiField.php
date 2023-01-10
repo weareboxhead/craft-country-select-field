@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2023 Boxhead
  */
 
-namespace lukeyouell\countryselect\fields;
+namespace boxhead\countryselect\fields;
 
 use Craft;
 use craft\base\ElementInterface;
