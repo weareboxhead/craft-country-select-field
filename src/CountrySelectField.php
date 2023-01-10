@@ -15,25 +15,25 @@ use Craft;
 use craft\base\Plugin;
 use craft\services\Fields;
 use craft\events\RegisterComponentTypesEvent;
-use boxhead\countryselect\fields\CountrySelectField as CountrySelectField;
-use boxhead\countryselect\fields\CountrySelectMultiField as CountrySelectMultiField;
+use boxhead\countryselect\fields\CountrySingleSelectField as CountrySingleSelectField;
+use boxhead\countryselect\fields\CountryMultiSelectField as CountryMultiSelectField;
 use yii\base\Event;
 
 /**
  * Class CountrySelect
  *
  * @author    Boxhead
- * @package   CountrySelect
+ * @package   CountrySelectField
  * @since     1.0.0
  *
  */
-class CountrySelect extends Plugin
+class CountrySelectField extends Plugin
 {
     // Static Properties
     // =========================================================================
 
     /**
-     * @var CountrySelect
+     * @var CountrySelectField
      */
     public static $plugin;
 
@@ -60,14 +60,14 @@ class CountrySelect extends Plugin
             Fields::class,
             Fields::EVENT_REGISTER_FIELD_TYPES,
             function (RegisterComponentTypesEvent $event) {
-                $event->types[] = CountrySelectField::class;
-                $event->types[] = CountrySelectMultiField::class;
+                $event->types[] = CountrySingleSelectField::class;
+                $event->types[] = CountryMultiSelectField::class;
             }
         );
 
         Craft::info(
             Craft::t(
-                'country-select',
+                'country-select-field',
                 '{name} plugin loaded',
                 ['name' => $this->name]
             ),

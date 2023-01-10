@@ -22,7 +22,7 @@ use craft\helpers\Json;
 
 /**
  * @author    Boxhead
- * @package   CountrySelect
+ * @package   CountrySelectField
  * @since     1.0.0
  */
 class CountrySelectBaseOptionsField extends Field

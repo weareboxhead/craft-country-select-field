@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Country Select plugin for Craft CMS 3.x
  *
@@ -15,10 +16,10 @@ use craft\base\ElementInterface;
 
 /**
  * @author    Boxhead
- * @package   CountrySelect
+ * @package   CountrySelectField
  * @since     1.0.0
  */
-class CountrySelectField extends CountrySelectBaseOptionsField
+class CountrySingleSelectField extends CountrySelectBaseOptionsField
 {
     // Properties
     // =========================================================================
@@ -36,7 +37,7 @@ class CountrySelectField extends CountrySelectBaseOptionsField
      */
     public static function displayName(): string
     {
-        return Craft::t('country-select', 'Country Select');
+        return Craft::t('country-select-field', 'Country Select');
     }
 
     // Public Methods
@@ -53,7 +54,7 @@ class CountrySelectField extends CountrySelectBaseOptionsField
 
         // Render the input template
         return Craft::$app->getView()->renderTemplate(
-            'country-select/_select',
+            'country-select-field/_select',
             [
                 'name' => $this->handle,
                 'value' => $value,

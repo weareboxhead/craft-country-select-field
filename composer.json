@@ -2,7 +2,7 @@
   "name": "boxhead/craft-country-select-field",
   "description": "Country select field type.",
   "type": "craft-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "craft",
     "cms",
@@ -30,11 +30,11 @@
     }
   },
   "extra": {
-    "name": "Country Select",
-    "handle": "country-select",
+    "name": "Country Select Field",
+    "handle": "country-select-field",
     "hasCpSettings": false,
     "hasCpSection": false,
     "changelogUrl": "https://raw.githubusercontent.com/weareboxhead/craft-country-select-field/v1/CHANGELOG.md",
-    "class": "boxhead\\countryselect\\CountrySelect"
+    "class": "boxhead\\countryselect\\CountrySelectField"
   }
 }
