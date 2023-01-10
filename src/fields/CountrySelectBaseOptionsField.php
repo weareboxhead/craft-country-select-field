@@ -12,13 +12,13 @@ namespace boxhead\countryselect\fields;
 
 use Craft;
 use craft\base\ElementInterface;
-use craft\base\BaseOptionsField;
+use craft\fields\BaseOptionsField;
 use craft\fields\data\OptionData;
 use craft\fields\data\MultiOptionsFieldData;
 use craft\fields\data\SingleOptionFieldData;
 use craft\helpers\Db;
-use yii\db\Schema;
 use craft\helpers\Json;
+use yii\db\Schema;
 
 /**
  * @author    Boxhead

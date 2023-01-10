@@ -1,5 +1,11 @@
 # Country Select Field Changelog
 
+## 4.0.2 - 2023-01-10
+
+### Fixed
+
+- Correct BaseOptionsField namespace
+
 ## 4.0.1 - 2023-01-10
 
 ### Fixed
