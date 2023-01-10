@@ -1,5 +1,11 @@
 # Country Select Field Changelog
 
+## 4.0.3 - 2023-01-10
+
+### Fixed
+
+- Add $encode param to fields translatedOptions function
+
 ## 4.0.2 - 2023-01-10
 
 ### Fixed
