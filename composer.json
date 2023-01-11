@@ -2,7 +2,7 @@
   "name": "boxhead/craft-country-select-field",
   "description": "Country select field type.",
   "type": "craft-plugin",
-  "version": "4.0.8",
+  "version": "4.0.9",
   "keywords": [
     "craft",
     "cms",
@@ -14,7 +14,7 @@
     "docs": "https://github.com/weareboxhead/craft-country-select-field/blob/v1/README.md",
     "issues": "https://github.com/weareboxhead/craft-country-select-field/issues"
   },
-  "license": "Craft",
+  "license": "proprietary",
   "authors": [
     {
       "name": "Boxhead",

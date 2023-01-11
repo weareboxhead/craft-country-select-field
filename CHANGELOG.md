@@ -1,5 +1,11 @@
 # Country Select Field Changelog
 
+## 4.0.9 - 2023-01-11
+
+### Fixed
+
+- Fixed composer package license value
+
 ## 4.0.8 - 2023-01-11
 
 ### Changed
