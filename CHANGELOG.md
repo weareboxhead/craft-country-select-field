@@ -1,6 +1,12 @@
 # Country Select Field Changelog
 
-## 4.0.6 - 2023-01-11
+## 4.0.8 - 2023-01-11
+
+### Changed
+
+- Update readme to reference Craft 4 and provide fuller description
+
+## 4.0.7 - 2023-01-11
 
 ### Changed
 
