@@ -1,12 +1,12 @@
 <img src="src/icon.svg" alt="icon" width="100" height="100">
 
-# Country Select Field plugin for Craft CMS 3.x
+# Country Select Field plugin for Craft CMS 4.x
 
-Country select field type.
+A custom field type that lists country names. The field options can be customised from the initial set to add/remove, re-order and provide a default country.
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0 or later.
+This plugin requires Craft CMS 4.0.0 or later.
 
 ## Installation
 
@@ -20,4 +20,4 @@ To install the plugin, follow these instructions.
 
         composer require boxhead/craft-country-select-field
 
-3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Country Select.
+3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Country Select Field.
