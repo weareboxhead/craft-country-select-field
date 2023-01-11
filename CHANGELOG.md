@@ -1,8 +1,22 @@
 # Country Select Field Changelog
 
+## 4.0.6 - 2023-01-11
+
+### Changed
+
+- Changed liense to use Craft's
+
 ## 4.0.5 - 2023-01-10
 
+### Fixed 
+
+- Updated some more function declarations to be compatible with parent classes
+
 ## 4.0.4 - 2023-01-10
+
+### Fixed
+
+- Updated some function declarations providing type hints to be compatible with parent classes
 
 ## 4.0.3 - 2023-01-10
 
