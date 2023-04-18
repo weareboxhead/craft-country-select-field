@@ -160,7 +160,7 @@ class CountrySelectBaseOptionsField extends BaseOptionsField
     /**
      * @return array
     */
-    protected function translatedOptions(bool $encode = false): array
+    protected function translatedOptions(bool $encode = false, mixed $value = null, ?ElementInterface $element = null): array
     {
         $countries = [
             ['value' => 'AD', 'label' => Craft::t('country-select-field', 'Andorra')],

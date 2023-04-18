@@ -1,5 +1,11 @@
 # Country Select Field Changelog
 
+## 4.0.10 - 2023-04-18
+
+### Fixed
+
+- Update compatiblilty of translatedOptions method
+
 ## 4.0.9 - 2023-01-11
 
 ### Fixed
