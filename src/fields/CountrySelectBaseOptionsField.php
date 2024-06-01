@@ -38,7 +38,7 @@ class CountrySelectBaseOptionsField extends BaseOptionsField
     /**
      * @var bool Whether the field should support multiple selections
      */
-    protected bool $multi = false;
+    protected static bool $multi = false;
 
     // Public Methods
     // =========================================================================
@@ -81,7 +81,7 @@ class CountrySelectBaseOptionsField extends BaseOptionsField
     /**
      * @inheritdoc
      */
-    public function normalizeValue($value, ElementInterface $element = null): mixed
+    public function normalizeValue(mixed $value, ?\craft\base\ElementInterface $element = null): mixed
     {
         if ($value instanceof MultiOptionsFieldData || $value instanceof SingleOptionFieldData) {
             return $value;

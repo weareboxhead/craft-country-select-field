@@ -47,7 +47,7 @@ class CountryMultiSelectField extends CountrySelectBaseOptionsField
     /**
      * @inheritdoc
      */
-    public function getInputHtml($value, ?ElementInterface $element = null): string
+    public function getInputHtml(mixed $value, ?ElementInterface $element = null): string
     {
         $name = $this->handle;
         $options = $this->translatedOptions();
