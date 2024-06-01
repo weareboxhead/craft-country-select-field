@@ -1,5 +1,11 @@
 # Country Select Field Changelog
 
+## 5.0.0 - tbd
+
+### Updated
+
+- Craft 5 compatibility changes
+
 ## 4.0.10 - 2023-04-18
 
 ### Fixed
