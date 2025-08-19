@@ -1,5 +1,11 @@
 # Country Select Field Changelog
 
+## 5.0.0 - 2025-09-19
+
+### Changed
+
+-   Craft 5 Compatibility
+
 ## 4.1.0 - 2025-09-19
 
 ### Changed
