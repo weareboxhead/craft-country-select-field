@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Country Select plugin for Craft CMS 3.x
+ * Country Select plugin for Craft CMS
  *
  * Country select field type.
  *
@@ -12,14 +12,15 @@
 namespace boxhead\countryselect\fields;
 
 use Craft;
-use craft\base\ElementInterface;
+use craft\fields\Dropdown;
+use boxhead\countryselect\CountrySelectField;
 
 /**
  * @author    Boxhead
  * @package   CountrySelectField
  * @since     1.0.0
  */
-class CountrySingleSelectField extends CountrySelectBaseOptionsField
+class CountrySingleSelectField extends Dropdown
 {
     // Static Methods
     // =========================================================================
@@ -38,26 +39,42 @@ class CountrySingleSelectField extends CountrySelectBaseOptionsField
     /**
      * @inheritdoc
      */
-    public function getInputHtml(mixed $value, ?ElementInterface $element = null): string
+    public function init(): void
     {
-        $name = $this->handle;
-        $options = $this->translatedOptions();
+        parent::init();
 
-        // Get our id and namespace
-        $id = Craft::$app->getView()->formatInputId($name);
-        $namespacedId = Craft::$app->getView()->namespaceInputId($id);
+        $this->setCountries();
+    }
 
-        // Render the input template
-        return Craft::$app->getView()->renderTemplate(
-            'country-select-field/_select',
+    public function getSettingsHtml(): null|string
+    {
+        return null;
+    }
+
+    // Protected Methods
+    // =========================================================================
+
+    protected function optionsSettingLabel(): string
+    {
+        return Craft::t('country-select-field', 'Options');
+    }
+
+    /**
+     * @return array
+    */
+    protected function setCountries(): void
+    {
+        // Access countries service class to get options
+        $countries = CountrySelectField::getInstance()->countries->getCountries();
+
+        $this->options = [
             [
-                'name' => $name,
-                'value' => $value,
-                'field' => $this,
-                'id' => $id,
-                'namespacedId' => $namespacedId,
-                'options' => $options,
+                'label' => 'Choose a country',
+                'value' => '',
+                'disabled' => true,
             ]
-        );
+        ];
+
+        $this->options = array_merge($this->options, $countries);
     }
 }

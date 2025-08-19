@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Country Select plugin for Craft CMS 3.x
+ * Country Select plugin for Craft CMS
  *
  * Country select field type.
  *
@@ -12,12 +12,13 @@
 namespace boxhead\countryselect;
 
 use Craft;
+use yii\base\Event;
 use craft\base\Plugin;
 use craft\services\Fields;
+use boxhead\countryselect\services\Countries;
 use craft\events\RegisterComponentTypesEvent;
-use boxhead\countryselect\fields\CountrySingleSelectField as CountrySingleSelectField;
 use boxhead\countryselect\fields\CountryMultiSelectField as CountryMultiSelectField;
-use yii\base\Event;
+use boxhead\countryselect\fields\CountrySingleSelectField as CountrySingleSelectField;
 
 /**
  * Class CountrySelect
@@ -37,7 +38,7 @@ class CountrySelectField extends Plugin
      */
     public static CountrySelectField $plugin;
 
-    // Public Properties 
+    // Public Properties
     // =========================================================================
 
     /**
@@ -60,6 +61,10 @@ class CountrySelectField extends Plugin
     {
         parent::init();
         self::$plugin = $this;
+
+        $this->setComponents([
+            'countries' => Countries::class,
+        ]);
 
         Event::on(
             Fields::class,
